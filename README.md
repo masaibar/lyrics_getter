@@ -1,3 +1,2 @@
-# kasitime_lyrics_getter
 # lyrics_getter
-# lyrics_getter
+歌詞検索サイトから簡単に歌詞をコピーできるChrome拡張
