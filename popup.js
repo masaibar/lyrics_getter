@@ -6,6 +6,8 @@ function getLyrics() {
 	    	chrome.tabs.executeScript(null, {"file": "get_lyrics/j-lyric.js"});
 		} else if (tab.url.match(/kashinavi\.com\/song_view\.html\?[0-9]*$/) != null) {
 			chrome.tabs.executeScript(null, {"file": "get_lyrics/kashinavi.js"});
+		} else if (tab.url.match(/www\.uta-net\.com\/song\/[0-9]*/) != null) {
+			chrome.tabs.executeScript(null, {"file": "get_lyrics/uta-net.js"});
 		}
 	
 	});
