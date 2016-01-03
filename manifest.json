@@ -1,0 +1,27 @@
+{
+  "name": "歌詞ゲッター",
+  "version": "1.0",
+  "manifest_version": 2,
+
+  "description" : "歌詞検索サイトからクリップボードへ歌詞を簡単にコピー出来ます",
+
+  "icons" : {
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
+  "permissions": [
+  	"tabs", "http://*/*"
+  ], 
+
+  "background": {
+  	"scripts": ["background.js"]
+  },
+
+  "page_action": {
+	"default_icon": "icons/icon19.png",
+	"default_title": "歌詞ゲッター",
+	"default_popup": "popup.html"
+  }
+}
