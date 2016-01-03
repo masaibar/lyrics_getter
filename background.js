@@ -32,14 +32,5 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 				}, function(result) {
 					title = result;
 				});
-	} else if (tab.url.match(/www\.joysound\.com\/web\/search\/song\/[0-9]*$/) != null) {
-		//URLがJOYSOUNDの歌詞ページだったらアイコンをアドレスバーに表示する
-		chrome.pageAction.show(tabId);
-
-		chrome.tabs.executeScript(null,
-				{"code":"document.getElementsByClassName('ng-binding')[0].innerHTML"
-				}, function(result) {
-					title = result;
-				});
 	}
 });
