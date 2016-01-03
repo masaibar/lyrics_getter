@@ -1,9 +1,10 @@
 {
   "name": "歌詞ゲッター",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
 
-  "description" : "歌詞検索サイトからクリップボードへ歌詞を簡単にコピー出来ます",
+  "description" : "歌詞検索サイトからクリップボードへ歌詞を簡単にコピー出来ます。
+  現在対応しているのは歌詞タイム,歌詞ナビ,J-Lyric.netです。",
 
   "icons" : {
     "32": "icons/icon32.png",
