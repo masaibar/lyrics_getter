@@ -37,7 +37,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 		chrome.pageAction.show(tabId);
 
 		chrome.tabs.executeScript(null,
-				{"code":"document.getElementById('status-heading').getElementsByTagName('h1')[0].innerHTML.replace(/<strong>/g, '').replace(/<\/strong>/g, '')"
+				{"code":"document.getElementById('status-heading').getElementsByTagName('h1')[0].innerHTML.replace(/<strong>/g, '').replace(/<\\/strong>/g, '')"
 				}, function(result) {
 					title = result;
 				});
