@@ -6,8 +6,8 @@ console.log(lyrics);
 var dummyDiv = document.createElement("div");
 dummyDiv.innerHTML = '<textarea id="copyTextarea">'+lyrics+'</textarea>';
 
-//ページが下にスクロールされないようにcaptionBandの下に擬似的にtextareaを作る
-var parentObject = document.getElementById("captionBand");
+//ページが下にスクロールされないようにheaderの下に擬似的にtextareaを作る
+var parentObject = document.getElementById("header");
 parentObject.appendChild(dummyDiv);
 
 //コピーするためにテキストエリアを選択状態にする
