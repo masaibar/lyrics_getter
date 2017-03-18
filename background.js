@@ -50,4 +50,5 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 			}, function(result) {
 				title = result;
 			});
+	}
 });
