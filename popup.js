@@ -9,6 +9,9 @@ function getLyrics() {
 		} else if (tab.url.match(/www\.kget\.jp\/lyric\/.*\/.*$/) != null) {
 			chrome.tabs.executeScript(null, {"file": "get_lyrics/kget.js"});
 		}
+		} else if (tab.url.match(/petitlyrics\.com\/lyrics\/[0-9]*$/) != null) {
+			chrome.tabs.executeScript(null, {"file": "get_lyrics/petitlyrics.js"});
+		}
 	});
 }
 
