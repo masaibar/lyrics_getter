@@ -32,5 +32,23 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
 				}, function(result) {
 					title = result;
 				});
+	} else if (tab.url.match(/www\.kget\.jp\/lyric\/.*\/.*$/) != null) {
+		//URLが歌詞GETの歌詞ページだったらアイコンをアドレスバーに表示する
+		chrome.pageAction.show(tabId);
+
+		chrome.tabs.executeScript(null,
+				{"code":"document.getElementById('status-heading').getElementsByTagName('h1')[0].innerHTML.replace(/<strong>/g, '').replace(/<\\/strong>/g, '')"
+				}, function(result) {
+					title = result;
+				});
+	} else if (tab.url.match(/petitlyrics\.com\/lyrics\/[0-9]*$/) != null) {
+		//URLがプチリリの歌詞ページだったらアイコンをアドレスバーに表示する
+		chrome.pageAction.show(tabId);
+
+		chrome.tabs.executeScript(null,
+			{"code":"document.getElementsByClassName('title-bar')[0].innerHTML"
+			}, function(result) {
+				title = result;
+			});
 	}
 });

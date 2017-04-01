@@ -6,8 +6,11 @@ function getLyrics() {
 			chrome.tabs.executeScript(null, {"file": "get_lyrics/j-lyric.js"});
 		} else if (tab.url.match(/kashinavi\.com\/song_view\.html\?[0-9]*$/) != null) {
 			chrome.tabs.executeScript(null, {"file": "get_lyrics/kashinavi.js"});
+		} else if (tab.url.match(/www\.kget\.jp\/lyric\/.*\/.*$/) != null) {
+			chrome.tabs.executeScript(null, {"file": "get_lyrics/kget.js"});
+		} else if (tab.url.match(/petitlyrics\.com\/lyrics\/[0-9]*$/) != null) {
+			chrome.tabs.executeScript(null, {"file": "get_lyrics/petitlyrics.js"});
 		}
-
 	});
 }
 
